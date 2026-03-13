@@ -1,0 +1,24 @@
+Name: Vikram Patel
+Email: vikramds@gmail.com
+
+Education
+M.Tech Data Science
+
+Skills
+Python
+Pandas
+NumPy
+Matplotlib
+Machine Learning
+Scikit-learn
+SQL
+
+Projects
+House Price Prediction
+Implemented regression model to predict housing prices.
+
+Customer Segmentation
+Used clustering algorithms for customer segmentation.
+
+Experience
+Data analyst internship for 6 months.

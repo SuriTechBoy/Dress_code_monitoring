@@ -1,0 +1,13 @@
+John Doe
+Web Developer
+
+Skills
+HTML
+CSS
+JavaScript
+React
+Node.js
+
+Projects
+Portfolio Website
+E-commerce Web App

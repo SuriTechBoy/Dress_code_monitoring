@@ -1,0 +1,28 @@
+Name: Ananya Sharma
+Email: ananya.dev@gmail.com
+Phone: 9123456780
+
+Education
+B.Tech Computer Science – 2023
+
+Skills
+HTML
+CSS
+JavaScript
+React
+Node.js
+Express
+MongoDB
+REST APIs
+Git
+Docker
+
+Projects
+E-commerce Website
+Developed a full stack e-commerce platform using React, Node.js and MongoDB.
+
+Chat Application
+Built a real-time chat app using Socket.io.
+
+Experience
+1 year internship as Full Stack Developer.

@@ -1,0 +1,12 @@
+Name: Student
+
+Education
+B.Tech Computer Science
+
+Skills
+Basic C
+MS Word
+PowerPoint
+
+Projects
+None

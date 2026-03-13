@@ -1,0 +1,18 @@
+Name: Arjun Mehta
+
+Skills
+Linux
+AWS
+Docker
+Kubernetes
+Terraform
+CI/CD
+Jenkins
+Python
+Shell Scripting
+
+Projects
+Automated deployment pipeline using Jenkins and Docker.
+
+Experience
+DevOps Engineer Intern – 1 year
