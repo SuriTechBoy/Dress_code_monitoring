@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      
+      .back-arrow {
+        text-decoration: none;
+        font-size: 24px;
+        color: #000;
+      }
+      
+      h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+      }
+      
+      .profile-image {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+      }
+      
+      .profile-image img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+      
+      .edit-icon {
+        position: absolute;
+        bottom: 5px;
+        right: calc(50% - 20px);
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input{
+        opacity: 0.5;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color:orange;
+        opacity: 0.9;
+      }
+      
+      input,
+      select {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      
+      .save-btn {
+        padding: 10px;
+        background: #98b7d8;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      
+      .save-btn:hover {
+        background: orange;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .leftarrow1{
+        height: 30px;
+        width: 30px;
+        margin-left:-10px ;
+        margin-top:-15px ;
+        position: absolute;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+</style></head>
+<body>
+  <div class="container">
+    <div class="header">
+        <a href="index123.html">  <img src="https://tse4.mm.bing.net/th?id=OIP.bR0Vpvy2w2knzTEUohWc2wHaHa&pid=Api&P=0&h=180" class="leftarrow1"></a>
+
+      <h1 style="margin-right: 130px; font-size:29px;">Edit Profile</h1>
+    </div>
+    <div class="profile-image">
+      <img src="https://d2kf8ptlxcina8.cloudfront.net/YH5TFCE1QY-preview.png" alt="User" />
+      <button class="edit-icon">&#128247;</button>
+    </div>
+    <form class="form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" value="P.surendhra">
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" value="psurendhra231@gmail.com">
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+      
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" value="2024-01-22">
+      
+      <label for="region">Country/Region</label>
+      <select id="region" name="region">
+        <option value="Tirupathi" selected>Tirupathi</option>
+        <option value="Other">Other</option>
+      </select>
+      
+      <button type="submit" class="save-btn">Save Changes </button>
+    </form>
+  </div>
+</body>
+</html>

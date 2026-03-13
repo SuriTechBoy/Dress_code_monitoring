@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.feedback-container {
+  background: rgba(148, 147, 147, 0.6);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.feedback-header h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: rgb(255, 174, 25);
+}
+.feedback-containe p{
+    color: orange;
+}
+
+.feedback-header p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: rgb(161, 243, 229);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  color: #f58b12;
+}
+
+.feedback-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.feedback-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.feedback-form button:hover {
+  background-color: #f58b12;
+}
+.leftarrow1{
+    height: 25px;
+    width: 25px;
+    margin-left:-230px ;
+    margin-top:-5spx ;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+.feed1{
+    height: 94%;
+    width: 42%;
+    background: url(https://c4.wallpaperflare.com/wallpaper/452/590/447/dried-fruit-variety-many-wallpaper-thumb.jpg);
+    background-repeat: no-repeat;
+margin-left: 00px;
+}
+</style></head>
+<body>
+    <div class="feed1">
+  <div class="feedback-container">
+    <div class="feedback-header">
+        <a href="index123.html">  <img src="https://tse4.mm.bing.net/th?id=OIP.wmH2a8j4Kj9bK2mm7Rcv2gHaHa&pid=Api&P=0&h=180" class="leftarrow1"></a>
+
+      <h1>Submit your feedback</h1>
+      <p>Your comments are important for us and crucial in helping us to provide the best products.</p>
+    </div>
+    <form class="feedback-form">
+      <input type="text" placeholder="Name" name="name" required>
+      <input type="tel" placeholder="Phone" name="phone" required>
+      <input type="email" placeholder="Email" name="email" required>
+      <textarea placeholder="Message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  </div>
+</body>
+</html>

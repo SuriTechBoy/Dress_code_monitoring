@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      
+      .cart-container {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      
+      .cart-header {
+        font-size: 2.0rem;
+        font-weight: bold;
+        margin-bottom: -50px;
+        text-align: center;
+        color: orange;
+      }
+
+      .checkout-section {
+        margin-top: 20px;
+      }
+      
+      .checkout-header {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 25px;
+        color: orange;
+
+      }
+      
+      .shipping-options {
+        margin-bottom: 15px;
+      }
+      
+      .shipping-option {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      
+      .payment,
+      .promo-code,
+      .total-cost {
+        margin-bottom: 15px;
+      }
+      
+      .payment select,
+      .promo-code input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .total-cost {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: orange;
+      }
+      
+      .place-order-btn {
+        width: 100%;
+        background: green;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+      .place-order-btn:hover
+      {
+        background-color: orange;
+      }
+
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-image {
+    width: 110px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .item-size {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 10px 0;
+  }
+  
+  .item-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-btn {
+    width: 30px;
+    height: 30px;
+    background:white;
+    border: none;
+    border-radius: 50%;
+    font-size: 48px;
+    cursor: pointer;
+    margin-top: 140px;
+    margin-left: -430px;
+  }
+  .quantity-btnplus {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    margin-top: 170px;
+    margin-left: 20px;
+    
+  }
+  
+  .quantity {
+   margin-top: 175px;
+    margin-left: 20px;
+        font-size: 20px;
+
+  }
+  
+  .item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 200px;
+    font-size: 30px;
+  }
+  .leftarrow1{
+    height: 30px;
+    width: 30px;
+    margin-left:-240px ;
+    margin-top:5px ;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+</style></head>
+<body>
+  <div class="cart-container">
+
+    <div class="cart-header"><span>    <a href="index123.html">  <img src="https://tse4.mm.bing.net/th?id=OIP.bR0Vpvy2w2knzTEUohWc2wHaHa&pid=Api&P=0&h=180" class="leftarrow1"></a>
+    </span>My Cart</div>
+    <div class="cart-item">
+        <img src="https://media.istockphoto.com/id/1198650670/photo/dried-fruits-with-nuts-in-wooden-bowl.jpg?s=612x612&w=0&k=20&c=BDCX28KJAjqjtPwFWhEmiDnKBHavAjbYLiDtZJn-mZU=" alt="Dates" class="item-image">
+        <div class="item-details">
+          <p class="item-name">Apricots (Khubani)</p>
+          <p class="item-size">Size: Large</p>
+        </div>
+        <div class="item-quantity">
+          <button class="quantity-btn">-</button>
+          <span class="quantity">1</span>
+          <button class="quantity-btnplus">+</button>
+        </div>
+        <p class="item-price">$9.0</p>
+      </div>
+     
+    <div class="checkout-section">
+      <div class="checkout-header">Checkout</div>
+      <div class="shipping-options">
+        <div class="shipping-option">
+          <input type="radio" id="ups1" name="shipping">
+          <label for="ups1">UPS Ground Shipping (3-5 Business days)</label>
+        </div>
+        <div class="shipping-option">
+          <input type="radio" id="ups2" name="shipping">
+          <label for="ups2">USPS Ground Shipping (5-7 Business days)</label>
+        </div>
+      </div>
+      <p style="opacity: 0.1; margin-top:20px;">.</p>
+      <hr>
+      <div class="payment">
+        <label style="color: orange; font-size:1.5rem; font-weight:bold;">Payment</label>
+        <p style="opacity: 0.1; margin-top:-10px;">.</p>
+
+        <select >
+           
+          <option>PhonePay</option>
+          <option>GooglePay</option> 
+          <option>FamPay</option> 
+          <option>UPI</option>
+          <option>Cash on delivery</option>
+        </select>
+      </div>
+      <p style="opacity: 0.1; margin-top:-10px;">.</p>
+
+      <hr style="color: orange;">
+      <div class="promo-code">
+        <p style="opacity: 0.1; margin-top:-20px;">.</p>
+
+        <label style="color: orange; font-size:1.4rem; font-weight:bold;">Promo Code</label>
+        <p style="opacity: 0.1; margin-top:-15px;">.</p>
+
+        <input type="text" placeholder="Enter code">
+      </div>
+      <p style="opacity: 0.1; margin-top:-20px;">.</p>
+
+      <hr>
+      <p style="opacity: 0.1; margin-top:-20px;">.</p>
+
+      <div class="total-cost">
+        
+        <label>Total Cost</label>
+        <span style="color: black;">-$9.0</span>
+      </div>
+      <p style="opacity: 0.1; margin-top:-20px;">.</p>
+
+      <a href="https://www.amazon.in/s?k=apricot+dryfruits+1kg&crid=3ADV2J2Y60WG1&sprefix=apricot+1kg%2Caps%2C292&ref=nb_sb_ss_mvt-t11-ranker_2_11"><button class="place-order-btn">Place Order</button></a>
+    </div>
+  </div>
+  <div style="margin-top: 75px; width:400px; ">
+    <div style="height: 80px; margin-top:-60px;width: 700px; box-shadow: 2px 2px 2px 2px rgb(131, 127, 127); border-radius: 8px; margin-left: 410px; display: flex; justify-content: space-around; align-items: center; position:sticky;">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126122.png" style="height: 30px; width: 30px;margin-left:-05px; ">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.mo93ABeC7YN4ubbO_U4kUgHaHa&pid=Api&P=0&h=180" style="height: 30px; width: 30px;margin-left:20px;">
+        <a href="index123.html"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" style="height: 30px; width: 30px;"></a>
+        <img src="https://cdn-icons-png.flaticon.com/512/5166/5166615.png" style="height: 50px; width: 50px;">
+        <a href="Dryfruit_Mart_accountsettings.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqA6uHEObfkhtT164f3XOrzX_PRvX7kKZaig&s" style="height: 50px; width: 50px;"></a>
+    </div>
+    </div>
+</body>
+</html>

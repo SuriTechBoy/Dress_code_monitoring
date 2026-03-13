@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments & Feedback</title>
+
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f4f4f9; 
+      margin: 0; 
+      padding: 20px; 
+    }
+    h2 { 
+      text-align: center; 
+      margin-bottom: 20px; 
+      color: #222; 
+    }
+    .comment-box { 
+      background: white; 
+      padding: 20px; 
+      border-radius: 8px; 
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1); 
+      max-width: 600px; 
+      margin: 10px auto; 
+    }
+    .comment-box input, 
+    .comment-box textarea {
+      width: 100%; 
+      padding: 10px; 
+      margin: 10px 0; 
+      border: 1px solid #ccc; 
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .comment-box button {
+      background: #333; 
+      color: white; 
+      border: none; 
+      padding: 10px 15px; 
+      border-radius: 5px; 
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .comment-box button:hover { 
+      background: #555; 
+    }
+    .comments-list { 
+      max-width: 600px; 
+      margin: 20px auto; 
+      max-height: 400px;   /* scrollable */
+      overflow-y: auto;
+    }
+    .comment-item { 
+      background: white; 
+      padding: 15px; 
+      border-radius: 5px; 
+      margin-bottom: 10px; 
+      border-left: 4px solid #333; 
+      box-shadow: 0px 1px 4px rgba(0,0,0,0.08);
+    }
+    .comment-item h4 { 
+      margin: 0 0 5px; 
+      color: #444; 
+    }
+    .comment-item small {
+      color: gray;
+      font-size: 12px;
+    }
+    .comment-item p { 
+      margin: 0; 
+      font-size: 14px; 
+      color: #555; 
+    }
+    .actions {
+      margin-top: 8px;
+    }
+    .actions button {
+      margin-right: 8px;
+      padding: 5px 10px;
+      font-size: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .like-btn { background: #28a745; color: white; }
+    .dislike-btn { background: #dc3545; color: white; }
+    .delete-btn { background: #6c757d; color: white; }
+  </style>
+</head>
+<body>
+
+  <h2>💬 Comments & Feedback</h2>
+
+  <!-- Comment Form -->
+  <div class="comment-box">
+    <input type="text" id="username" placeholder="Your Name" required>
+    <textarea id="message" rows="4" placeholder="Write your feedback..." required></textarea>
+    <button onclick="submitComment()">Post Comment</button>
+  </div>
+
+  <!-- Comments List -->
+  <div class="comments-list" id="commentsList"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <script>
+    // ✅ Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBMNSvLAYaGR6Cv3fkhZUcXQ6zqnGYduhM",
+      authDomain: "basic-b772d.firebaseapp.com",
+      databaseURL: "https://basic-b772d-default-rtdb.firebaseio.com/",
+      projectId: "basic-b772d",
+      storageBucket: "basic-b772d.appspot.com",
+      messagingSenderId: "40943311067",
+      appId: "1:40943311067:web:1cd9002ba9fec2396a94fe",
+      measurementId: "G-3MRLQKJDXN"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // ✅ Submit Comment
+    function submitComment() {
+      const username = document.getElementById("username").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (username.length < 3) {
+        alert("⚠️ Name must be at least 3 characters!");
+        return;
+      }
+      if (message.length < 5) {
+        alert("⚠️ Comment must be at least 5 characters!");
+        return;
+      }
+
+      const commentRef = db.ref("comments").push();
+      commentRef.set({
+        name: username,
+        text: message,
+        timestamp: Date.now(),
+        likes: 0,
+        dislikes: 0
+      });
+
+      document.getElementById("username").value = "";
+      document.getElementById("message").value = "";
+    }
+
+    // ✅ Like a comment
+    function likeComment(id, currentLikes) {
+      db.ref("comments/" + id).update({ likes: currentLikes + 1 });
+    }
+
+    // ✅ Dislike a comment
+    function dislikeComment(id, currentDislikes) {
+      db.ref("comments/" + id).update({ dislikes: currentDislikes + 1 });
+    }
+
+    // ✅ Delete a comment
+    function deleteComment(id) {
+      if (confirm("🗑️ Are you sure you want to delete this comment?")) {
+        db.ref("comments/" + id).remove();
+      }
+    }
+
+    // ✅ Load Comments
+    db.ref("comments").orderByChild("timestamp").on("value", function(snapshot) {
+      const commentList = document.getElementById("commentsList");
+      commentList.innerHTML = "";
+
+      snapshot.forEach(function(childSnapshot) {
+        const id = childSnapshot.key;
+        const comment = childSnapshot.val();
+        const div = document.createElement("div");
+        div.classList.add("comment-item");
+
+        div.innerHTML = `
+          <h4>${comment.name} 
+            <small>(${new Date(comment.timestamp).toLocaleString()})</small>
+          </h4>
+          <p>${comment.text}</p>
+          <div class="actions">
+            <button class="like-btn" onclick="likeComment('${id}', ${comment.likes || 0})">👍 ${comment.likes || 0}</button>
+            <button class="dislike-btn" onclick="dislikeComment('${id}', ${comment.dislikes || 0})">👎 ${comment.dislikes || 0}</button>
+            <button class="delete-btn" onclick="deleteComment('${id}')">🗑 Delete</button>
+          </div>
+        `;
+
+        commentList.appendChild(div);
+      });
+
+      commentList.scrollTop = commentList.scrollHeight;
+    });
+  </script>
+
+</body>
+</html>

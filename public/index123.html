@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryfruit Mart</title>
+<style>
+ @media only screen and (min-width: 600px) {
+  /* Styles for smaller devices */
+
+    
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      .productname{
+        color: orange;
+        font-weight: bold;
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+      .nav{
+        text-decoration: none;
+        margin-left: 500px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        
+       
+      }
+      .best{
+        background-color:   rgb(253, 253, 213);
+        color: black;
+        font-size: 9px;
+        height: 50px;
+        width: 190px;
+        margin-left:100px ;
+        margin-top: 60px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 200ms linear inherit;
+
+      }
+      .skip{
+        color: orange;
+        font-size: 70px;
+      }
+      .heading{
+        font-size: 70px;
+        color: black;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+      .para1{
+        margin-left: 100px;
+        color: rgb(127, 127, 127);
+        font-size: 24px;
+        margin-top: 50px;
+      }
+      .buttonorder{
+        color: white;
+        background: orange;
+        height: 60px;
+        width: 145px; 
+        margin-left: 100px;   
+        margin-top: 30px;
+        border-radius: 40px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .dryimg{
+        margin-left: 750px;
+        margin-top: -700px;
+        height: 400px;
+        width: 600px;
+
+      }
+      .happyimg{
+        margin-left: 800px;
+        margin-top: -50px;
+        height: 190px;
+        width: 390px;;
+      }
+      .custno{
+        margin-left: 100px; 
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+      }
+      .custno1{
+        margin-left: 50px; 
+      }
+      .custno2{
+        margin-left: 50px; 
+      }
+      .custno3{
+        margin-left: 100px; 
+        font-size: 15px;
+        
+        margin-top: 15px;
+      }
+      .custno4{
+        margin-left: 50px; 
+      }
+      .custno5{
+        margin-left: 50px; 
+      }
+      .food{
+        margin-top: 40px;
+        font-size: 45px;
+        margin-left: 90px;
+      }
+      .para3{
+        margin-left: 890px;
+        margin-top: -110px;
+        font-size: 21px;
+        color: gray;
+        opacity: 0.5;
+      }
+      .div1
+      {
+        display: flex;  
+        margin-left: 100px;
+      }
+      .orchad{
+        height: 500px;
+        width: 300px;
+        border-radius: 20px;
+        border:0.5px solid rgb(236, 235, 232);
+        margin-left: 100px;
+        margin-top: 60px;
+      }
+      .para4{
+       margin-left:25px;
+       margin-top: 220px;
+       font-size: 25px;
+       font-weight: bold;
+      }
+      .para5{
+        margin-left: 25px;
+        margin-top: 260px;
+        font-size: 25px;
+        font-weight: bold;
+       }
+       .para6{
+        margin-left: 50px;
+        margin-top: 220px;
+        font-size: 20px;
+        font-weight: bold;
+       }
+       .orchad1{
+        height: 70px;
+        width: 90px;
+        margin-top: 9px;
+        margin-left: 10px;
+       }
+       .orchard2{
+        font-size: 17px;
+        margin-left: 20px;
+        margin-top: 30px;
+       }
+       .para7{
+        background-color: rgb(246, 246, 187);
+        height: 110px; 
+        width: 140px;
+        border-radius: 25px;
+        margin-left: 20px;
+        margin-top: 20px;
+       }
+       .para8{
+        margin-top: -85px;
+       }
+       .para9{
+        margin-left: 20px;
+        margin-top: 35px;
+        color: grey;
+       }
+       .orchad4{
+        height: 500px;
+        width: 300px;
+        border-radius: 20px;
+        border: 0.5px solid gray;
+        margin-left: 100px;
+        margin-top: 60px;
+      }
+      .orchad5{
+        height: 500px;
+        width: 300px;
+        border-radius: 20px;
+        border: 0.5px solid rgb(236, 235, 232);
+        margin-left: 100px;
+        margin-top: 60px;
+      }
+    .para11{
+      margin-left: 25px;
+      margin-top: 265 px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .orchard3{
+      font-size: 17px;
+      margin-left: 20px;
+      margin-top: 30px;
+     }
+     .para12{
+      margin-left: 20px;
+      margin-top: 35px;
+      color: grey;
+      font-size: 43px;
+     }
+     .people{
+      height: 600px;
+      width: 100%;
+      background: rgb(248, 234, 209);
+    margin-top: 60px;
+     }
+     .para13{
+      font-size: 50px;
+      margin-left: 70px;
+      font-weight: bold;
+
+     }
+     .para15{
+      margin-top:170px;
+      margin-left: 70px;
+      color: gray;
+      font-size: 19px;
+
+     }
+     .para16{
+      margin-top:70px;
+      margin-left: 70px;
+      color: black;
+      font-size: 52px;
+      font-weight: bold;
+
+     }
+     .para17{
+      font-weight: bold;
+      text-align: center;
+      font-size: large;
+
+     }
+     .para18{
+      font-size: 40px;
+      font-weight: bold;
+
+     }
+     .badam{
+        height: 500px;
+        width: 300px;
+        border-radius: 20px;
+        border:0.5px solid rgb(236, 235, 232);
+        margin-left: 100px;
+        margin-top: 60px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .badamcalc{
+        height: 500px;
+        width: 300px;
+        position: relative;
+        
+
+      }
+      .sub{
+        height: 500px;
+        width: 85%;
+        justify-content: space-around;
+        background:rgb(241, 229, 207);
+        margin-top: 130px;
+        margin-left: 100px;
+        border-radius: 20px;
+      }
+      .para19{
+        color: orange;
+        margin-top: 50px;
+        margin-left: 650px;
+       
+        font-size: 20px;
+
+      }
+     .para20{
+      font-size: 60px;
+      margin-left: 350px;
+      margin-top: 30px;
+     }
+     .para21{
+      margin-left: 450px;
+      margin-top: 30px;
+      color: gray;
+      font-size: 20px;
+     }
+     .class22{
+      margin-left: 465px;
+      margin-top: 20px;
+     }
+     .para23{
+      height: 80px;
+      width: 670px;
+      background-color: white;
+      margin-left: 400px;
+      margin-top: 20px;
+      border-radius: 30px;
+     }
+  
+     .img5{
+      height: 70px;
+      width: 90px;
+      margin-top: 9px;
+      margin-left: 10px;
+     }
+     .par7{
+      background-color: rgb(246, 246, 187);
+      height: 110px; 
+      width: 140px;
+      border-radius: 25px;
+      margin-left: 20px;
+      margin-top: 20px;
+     }
+     .par5{
+      margin-left: 25px;
+      margin-top: 134px;
+      font-size: 25px;
+      font-weight: bold;
+     }
+     .par8{
+      background-color: rgb(246, 246, 187);
+      height: 110px; 
+      width: 140px;
+      border-radius: 25px;
+      margin-left: 20px;
+      margin-top: 20px;
+     }
+     .par11{
+      margin-left: 25px;
+      margin-top: 134px;
+      font-size: 25px;
+      font-weight: bold;
+     }
+     .img6{
+      height: 70px;
+      width: 90px;
+      margin-top: 15px;
+      margin-left: 19px;
+     }
+     .arrowimg{
+      height: 45px;
+      width: 50px;
+      border-radius: 10px;
+      background: orange;
+      margin-left: 125px;
+      margin-top: 30px;
+      opacity: 0.5px;
+     }
+     .imgarrow{
+      height: 20px;
+      width: 2  0px;
+      margin-left: 15px;
+      margin-top: 15px;
+     }
+     .arrowimg1{
+      height: 45px;
+      width: 50px;
+      border-radius: 10px;
+      background: rgb(239, 216, 174);
+      margin-left:65px;
+      margin-top: -45px;
+      opacity: 0.5px;
+     }
+     .imgarrow1{
+      height: 20px;
+      width: 2  0px;
+      margin-left: 15px;
+      margin-top: 15px;
+      opacity: 0.5px;
+     }
+     .people1{
+      height: 350px;
+      width: 250px;
+      background: rgb(251, 247, 238);
+      margin-left: 650px;
+      margin-top: -400px;
+      position: relative;
+     }
+     .people2{
+      height: 350px;
+      width: 250px;
+      background: rgb(251, 247, 238);
+      margin-left: 950px;
+      margin-top: -350px;
+     }
+     .people3{
+      height: 350px;
+      width: 250px;
+      background: rgb(251, 247, 238);
+      margin-left: 1250px;
+      margin-top: -350px;
+     }
+     .peoplepara1{
+      margin-left: 30px;
+     margin-bottom: -65px;
+      font-size: 20px;
+      font-weight: bold;
+     }
+     .peopleparaa1{
+      margin-left: 30px;
+     color: gray;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 1px;
+     }
+     .peoplepara2{
+      margin-left: 30px;
+     
+      font-size: 20px;
+      font-weight: bold;
+     }
+      .peoplepara3{
+      margin-left: 30px;
+     
+      font-size: 20px;
+      font-weight: bold;
+     }
+     .peopleparaapp1{
+      margin-left: 30px;
+     color: gray;
+      font-size: 15px;
+      font-weight: bold;
+     }
+     .peopleparaap1{
+      margin-left: 30px;
+     color: gray;
+      font-size: 15px;
+      font-weight: bold;
+     }
+     .peoplepara12{
+      margin-left: 30px;
+     color: black;
+      font-size: 14px;
+      
+     }
+     .peoplepara123{
+      margin-left: 30px;
+     color: black;
+      font-size: 14px;
+      
+     }
+     .peoplepara1234{
+      margin-left: 30px;
+     color: black;
+      font-size: 14px;
+      
+     }
+     .twitter{
+      height: 35px;
+      width: 35px;
+     margin-left: 1200px;
+     
+      margin-top: -400px;
+     }
+     .linkedin{
+      height: 35px;
+      width: 35px;
+     margin-left: 1260px;
+     
+      margin-top: -420px;
+     }
+     .insta{
+      height: 35px;
+      width: 35px;
+     margin-left: 1320px;
+     
+      margin-top: -420px;
+     }
+     .gurureddy12{
+      height: 110px;
+      width: 115px;
+      margin-left: 20px;
+      margin-top: -20px;
+      border-radius: 10px;
+      position: relative;
+    
+     }
+     .brahmaji12{
+      height: 110px;
+      width: 115px;
+      margin-left: 20px;
+      margin-top: -20px;
+      border-radius: 10px;
+      position: relative;
+    
+     }
+     .muni12{
+      height: 110px;
+      width: 115px;
+      margin-left: 20px;
+      margin-top: -20px;
+      border-radius: 10px;
+      position: relative;
+    
+     }
+     .feedback{
+      margin-left: 80px;
+      margin-top: 40px;
+      height: 50px;
+      width: 290px;
+      background-color: azure;
+      border: 0.5px solid orange;
+      border-radius: 20px;
+      background-color: white;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+     }
+     .para25{
+      margin-left: 100px;
+      margin-top: 200px;
+      color: black;
+      font-weight: bold;
+      font-size: 22px;
+     }
+     .para26{
+      margin-left: 100px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para27{ 
+      margin-left: 450px;
+      margin-top: -120px;
+      color: orange;
+      font-weight: bold;
+      font-size: 22px;
+     }
+     .para28{
+      margin-left: 450px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para29{
+      margin-left: 450px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para30{
+      margin-left: 450px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para31{ 
+      margin-left: 720px;
+      margin-top: -200px;
+      color: orange;
+      font-weight: bold;
+      font-size: 22px;
+     }
+     .para32{
+      margin-left: 750px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para33{
+      margin-left: 750px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para34{
+      margin-left: 750px;
+      margin-top: 40px;
+      color: gray;
+      font-size: 15px;
+     }
+     .para35{
+      margin-left: 1200px;
+      margin-top: -160px;
+      color: orange;
+      font-weight: bold;
+      font-size: 20px;
+     }
+    }
+    
+</style>
+</head>
+<body>
+  <div class="media">
+    <header class="header">
+        <div class="container">
+          <h1 class="productname">Dryfruit Mart</h1>
+          <nav class="nav">
+            <a href="#" style="text-decoration: none; color:orange;">Home</a>
+           <div><a href="Dryfruit_Mart_menu.html" style="text-decoration: none; color:black; margin-left:-100px;"><span style="color: orange;">Menu</span></a></div>
+           <a href="Dryfruit_Mart_contactus.html" style="text-decoration: none; color:black; margin-left:-100px; color:orange;" >Contact Us</a>
+
+            <a href="Dryfruit_Mart_gallary.html" style="text-decoration: none; color:black; margin-left:-100px; color:orange;" >Gallery</a>
+            <a href="Dryfruit_Mart_signin.html" style="text-decoration: none; color:black; margin-left:-100px; color:orange">Account</a>
+           <button style="color: white; background-color:orange; float:left; margin-right:100px;font-size:16px;font-weight:bold;height:53px;width:100px;border-radius:20px;margin-top:-13px;"><a href="Dryfruit_Mart_signin.html" style="text-decoration: none;">Sign-in</a></button>
+          </nav>
+        </div>
+      </header>
+      
+  <section class="hero">
+    <div class="container">
+      <a href="Dryfruit_Mart_product_info.html"> <button class="best"><h2>#1 Best<span style="color: orange; margin-left:5px;">healthy </span> DryFruits</h2></button> </a>
+      <h2 class="heading"><span class="skip">Skip</span> The Diet,<br> Just Eat Healthy <br>With Dry Fruits</h2>
+     <p class="para1">Imagine you don't need a diet because we provide <br>healthy and delicious food for you!</p>
+     
+     <img src="https://wallpaperaccess.com/full/4002073.jpg" class="dryimg">
+     <a href="Dryfruit_Mart_products.html" style="text-decoration: none;"><button class="buttonorder">Order Dry Fruits</button></a>
+     <div><img src="img/happy1.jpg" class="happyimg"></div>
+      <div class="stats">
+        <div class="custno">5,000+<span class="custno1">8,000+</span><span class="custno2">1,000+</span></div>
+       
+        <div class="custno3">Customer<span class="custno4">Delivery</span><span class="custno5">Ratings</span></div>
+        <a href="Dryfruit_Mart_feedback.html"> <button class="feedback">Submit your Feedback</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-us">
+    <h2 class="food">WHY CHOOSE US <br><span style="color: orange;">FOR </span><span class="highlight">YOUR HEALTHY FOOD</span></h2>
+    <p class="para3">we continue to consistency choose and<br>maintain to the DryFruit served,so <br>that it remains fresh and nutritious when you<br>eat it.</p>
+    <div class="div1" >
+        <div class="orchad">
+           <div class="para7"> <img src="https://tse4.mm.bing.net/th?id=OIP.1_rA6pHtdHnJadjhKJ0ANQHaHa&pid=Api&P=0&h=180" class="orchad1">  </div>
+            <div class="para8"><p class="para4">Own dry fruit orchard</p>
+            <p class="orchard2">Owning a dryfruits orchard can be<br> a rewarding experience, providing a <br>source of fresh produce, income, <br>and a connection to nature</p>
+            <p class="para9"><span style="margin-top: -10px;position:relative;">Learn more</span><img src="https://tse3.mm.bing.net/th?id=OIP.BnMJO7_OzBD8Q6LmEkNBXAHaFy&pid=Api&P=0&h=180" style=" opacity:0.5;height: 15px;width:19px; margin-left:6px;margin-top:6px; position:absolute;"></p>
+          </div>
+          </div>
+         <div> 
+        <div class="orchad4">
+          <div class="par7"> <img src="https://cdn-icons-png.flaticon.com/128/4060/4060779.png" class="img5">  </div>
+            <p class="par5">#1 Healthy Dry fruit</p>
+            <p class="orchard2">Almonds,Walnets,DriedApricots,<br>Prunes,Cranbrrries,Raisins,Dates,<br>Pistachios, Dried figs, Dried Cherries  these are the healthy</p>
+           <a href="Dryfruit_Mart_learnmore.html"> <button style="color: white; background-color:orange; float:left; margin-left:20px;font-size:16px;font-weight:bold;height:43px;width:120px;border-radius:20px;margin-top:29px; cursor: pointer;">learn more</button></a>
+          
+        </div>
+        </div>
+        <div class="orchad5">
+          <div class="par8"> <img src="https://tse4.mm.bing.net/th?id=OIP.pbF1NDQu-8az0cloklXHtwHaIz&pid=Api&P=0&h=180" class="img6">  </div>
+            <p class="par11">100+ DryFruit Types</p>
+            <p class="orchard3">We are one of the bestbrands in <br>dry fruits and Beverage sector in indonesia</p>
+            <a href="Dryfruit_Mart_gallary.html" style="text-decoration: none;"><p class="para12"><span style="margin-top: -10px;position:relative; font-size: 16px;">Learn more</span><img src="https://tse3.mm.bing.net/th?id=OIP.BnMJO7_OzBD8Q6LmEkNBXAHaFy&pid=Api&P=0&h=180" style=" opacity:0.5;height: 15px;width:19px; margin-left:6px;margin-top:37px; position:absolute;"></p></a>
+
+        </div>
+    </div>
+    <div class="people">>
+     <div style= "display:flex;justify-content:space-around;height: 40px; width:400px; margin-top:50px;margin-left:50px; font-size:55px;"><p class="para12">What Are People<br>Saying<span style="color: orange;">About Us</span></p>
+    </div>
+    <p class="para15">We are very happy if you are satisfied with our <br>services and products,let's read pure reviews from <br>customers who bought our products</p>
+    <p class="para16">04<span style="color: gray;font-size:20px;">/05</span></p>
+    <div class="arrowimg"><img src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/512/arrow-right-128.png" class="imgarrow"></div>
+    <div class="arrowimg1"><img src="https://cdn0.iconfinder.com/data/icons/font-awesome-solid-vol-1/512/arrow-left-128.png" class="imgarrow1"></div>
+
+    <div class="people1">
+      <img src="img/gurureddy.jpg" class="gurureddy12">
+ 
+  <p class="peoplepara1"><span style="margin-top:50px;position:absolute;">Guru Reddy</span></p>
+  <p  class="peopleparaa1"><span style="margin-top:160px;position:absolute;">20 Years</span></p>
+  <p class="peoplepara12"> <span style="margin-top: 220px;position:absolute; font-size: 10px;">The poineer of Dry fruits that are<br> delicious and suitable for all peo<br>-ple with the best quality assurance,<br>Thank you for providing the healthy <br>and best quality dry fruits</span></p>
+</div>
+<div class="people2">
+  <img src="img/brahmaji.jpg" class="brahmaji12">
+
+  <p class="peoplepara2"><span style="margin-top: 50px;position:absolute;">Brammaji The Hacker</span></p>
+  <p  class="peopleparaap1"><span style="margin-top: 100px;position:absolute;">22 Years</span></p>
+  <p class="peoplepara123"> <span style="margin-top: 150px;position:absolute; font-size: 10px;">  Dryfruit mart dry fruits is the best<br> dry fruits shop in Andhra. Very curt <br>-eous staff, affordable prices and  <br>superior quality dry fruits. I always <br> buy  all my dry fruits and biscuits  <br>from them.</span></p>
+  </span></p>
+
+</div>
+<div class="people3">
+  <img src="img/muni.jpg" class="muni12">
+
+  <p class="peoplepara3"><span style="margin-top: 50px;position:absolute;">Power Muni</span></p>
+  <p  class="peopleparaapp1"><span style="margin-top: 100px;position:absolute;">17 Years</span></p>
+  <p class="peoplepara1234"> <span style="margin-top: 150px;position:absolute; font-size: 10px;">My experience with dry fruit.ae is <br>very good due to products quality <br>packaging is super. Delivery is on <br>time and prices is fully match <br>with the product quality. <br>and best quality dry fruits</span></p>
+
+</div>
+    </div>
+    <p style="opacity: 0.1;">.</p>
+    <p style="opacity: 0.1;">.</p>
+    <p style="opacity: 0.1;">.</p>
+    <p style="opacity: 0.1;">.</p>
+    <p style="font-size: 40px; margin-left:450px; margin: top 50px;">ENJOY THE BEST MENU AND GET</p>
+    <p class="18"><span style="font-size: 40px; margin-left:450px; color:orange;">DISCOUNTS</span> <span style="font-size: 40px; margin-left:0px; color:black;">........   AVAILABLE</span></p>
+    <p style="text-align: center; font-size:30px; color:rgb(119, 188, 14); margin-top:60px;"><a href="Dryfruit_Mart_products.html" style="text-decoration: none;">See All Products</a></p>
+    <div style="display: flex; margin-left:100px; text-decoration-color:black">
+    <div class="badam">
+     <span style="text-decoration: none;"> <a href="Dryfruit_Mart_product_info.html">  <div class="" style="text-decoration: none;"> <img src="img/badam.jpg"class="badamcalc" almonds><span style="margin-top: -100px;position:absolute; margin-left :25px;text-decoration:none;"><span style="color:white;">Almonds(Badam)</span></span> <span style="margin-top: -50px;position:absolute; margin-left :25px;font-size:29px;text-decoration:none; "><span style="color:white;">$10.99 </span></span> </div></a></span>
+       
+     </div>
+     <div class="badam">
+      <a href="Dryfruit_Mart_product_info.html" style="text-decoration: none;"> <div class=""> <img src="img/pista.jpg"class="badamcalc" ><span style="margin-top: -100px;position:absolute; margin-left :25px;"><span style="color:white;">Pistachio(Pista)</span></span><span style="margin-top: -50px;position:absolute; margin-left :25px;font-size:29px;"><span style="color:white;">$12.99 </span>  </div></a>
+       
+     </div>
+     <div class="badam">
+      <a href="Dryfruit_Mart_product_info.html" style="text-decoration: none;"><div class=""> <img src="img/kaju.jpg"class="badamcalc" ><span style="margin-top: -100px;position:absolute; margin-left :25px;"><span style="color:white;">Cashew(Kaju)</span></span><span style="margin-top: -50px;position:absolute; margin-left :25px;font-size:29px;"><span style="color:white;">$11.99 </span> </div></a>
+       
+     </div>
+     </div>
+     <div class="sub">
+        <p class="para19"> <span style="margin-top: 90px; text-align:center;">Our Subscribe</span></p>
+        <p class="para20"> Subscribe To Get The Latest<br>Promo from <span style="color: orange;">Dry Fruits Mart</span></p>
+        <p class="para21">We recommended you to to subscribe to our promo programs,<br><span style="margin-left: 35px;"x>drop your email below to get daily update about us</span></p>
+        <div class="para23" style="text-align: center; justify-content:space-around;"><div style="margin-left: -300px; margin-top:10px; padding:10px 20px;position:relative;"><span style="position: absolute; margin-left:-110px;font-size: 20 px;margin-top: 18px;opacity:0.1;">Enter your email address</span></div><a href="Dryfruit_Mart_accountsettings.html">  <button style="color: white; background-color:orange; float:left; margin-left:540px;font-size:16px;font-weight:bold;height:63px;width:120px;border-radius:20px;margin-top:-9px;">Subscribe</button></a>
+    
+        </div>
+     </div>
+     <div class="footer">
+     <p class="para25">Dry<span style="color: orange;"> Fruit </span>Mart</p>
+     <p class="para26">Dry fruit Mart is the pioneer of<br>healthy Dry fruit with<br>high nutrition.</p>
+     <p class="para27"> Features</p>
+     <a href="Dryfruit_Mart_menu.html" style="text-decoration: none;"><p class="para28">Menu</p></a>
+     <a href="Dryfruit_Mart_mycart_promocode.html" style="text-decoration: none;"><p class="para29">Promo</p></a>
+     <a href="Dryfruit_Mart_contactus.html" style="text-decoration: none;"><p class="para30">Contact</p></a>
+     <p class="para31"> Get in Touch</p>
+     <p class="para32">📍Surappakasam(v),Renigunta(M),<br>Tirupathi(D)</p>
+     <p class="para33">📧psurendhra231@gmail.com</p>
+     <p class="para34">📞+91-8688099364</p>
+     <img src="https://tse2.mm.bing.net/th?id=OIP.c5Nwvw_WON4Q1pQzXYXTIAHaHa&pid=Api&P=0&h=180" style="margin-bottom: 180px;" class="twitter">
+     <img src="https://tse4.mm.bing.net/th?id=OIP.bw0hGVkB9xsYM_wTx4z-hAAAAA&pid=Api&P=0&h=180" style="margin-bottom: 195px;" class="linkedin">
+     <img src="https://tse1.mm.bing.net/th?id=OIP.Qk3obblpo_MjIVLYR2RayAHaHa&pid=Api&P=0&h=180" style="margin-bottom: 215px;" class="insta">
+     <p class="para35">Follow our Social media.</p>
+</div>
+
+
+</div>
+</body>
+</html>

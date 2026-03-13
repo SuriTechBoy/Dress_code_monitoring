@@ -1,0 +1,2015 @@
+
+
+<html>
+    <head>
+        <title> Surendhra's E-comerce Website</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-color: #ff3c78;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
+
+/* -------- Top text -------- */
+.top-txt {
+    background-color: var(--black);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.945);
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.head a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.945);
+    margin: 0 10px;
+}
+
+/* -------- Navbar -------- */
+.navbar input[type="checkbox"], 
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0 5px 4px rgb(146 161 176 / 15%);
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    color: var(--black);
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 20px;
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.navbar-container ul a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar-container ul a:after {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.navbar-container ul a:hover:after {
+    width: 100%;
+}
+
+/* -------- MOBILE NAVBAR -------- */
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines {
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+        z-index: 3;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-container .logo img {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+}
+
+/* -------- HERO SECTION -------- */
+/* -------- HERO SECTION -------- */
+.page1 {
+  background-color: rgb(249, 248, 249);
+  padding: 50px 20px;
+}
+
+.home_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px; /* spacing between text and image */
+}
+
+/* Left Text */
+.home_txt {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home_txt p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home_txt h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--light-black);
+}
+
+.home_txt .home_label p {
+  color: grey;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.home_txt button {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.home_txt button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home_txt .bx-right-arrow-alt {
+  font-size: 22px;
+  margin-left: 8px;
+}
+
+.home_social_icons a {
+  text-decoration: none;
+  color: var(--light-black);
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+/* Right Image */
+.home_img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+  .home_page {
+    flex-direction: column;   /* ✅ stack text above image */
+    text-align: center;
+  }
+
+  .home_txt h2 {
+    font-size: 2.2rem;
+  }
+
+  .home_img img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_txt h2 {
+    font-size: 1.8rem;
+  }
+
+  .home_txt p {
+    font-size: 14px;
+  }
+
+  .home_txt button {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+
+  .home_img img {
+    max-width: 100%; /* full width on mobile */
+  }
+}
+
+
+
+/* ------------ RESPONSIVE HERO QUERIES ------------- */
+@media (max-width: 992px) {
+  .home_page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home_txt {
+    margin-bottom: 30px;
+  }
+
+  .home_txt h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_txt h2 {
+    font-size: 1.8rem;
+  }
+
+  .home_txt p {
+    font-size: 14px;
+  }
+
+  .home_txt button {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}
+
+/* //........ Collections ........// */
+
+.collections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.content {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content:hover::after {
+    opacity: 1;
+}
+
+.content img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content p {
+    font-size: 1.6rem;
+}
+
+.img-content button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content button:hover~.img-content a {
+    color: var(--primary-color);
+}
+
+.img-content a:hover {
+    color: var(--primary-color);
+}
+
+.content:hover .img-content {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 2 ........// */
+
+.content2 {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content2:hover::after {
+    opacity: 1;
+}
+
+.content2 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content2 p {
+    font-size: 1.6rem;
+}
+
+.img-content2 a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content2 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content2 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content2 button:hover~.img-content2 a {
+    color: var(--primary-color);
+}
+
+.img-content2 a:hover {
+    color: var(--primary-color);
+}
+
+.content2:hover .img-content2 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ Content 3 ........// */
+
+.content3 {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+}
+
+.content3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    z-index: 2;
+    opacity: 0;
+}
+
+.content3:hover::after {
+    opacity: 1;
+}
+
+.content3 img {
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.img-content3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--white);
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    z-index: 5;
+    opacity: 0;
+}
+
+.img-content3 p {
+    font-size: 1.6rem;
+}
+
+.img-content3 a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.img-content3 button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-content3 button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.img-content3 button:hover~.img-content3 a {
+    color: var(--primary-color);
+}
+
+.img-content3 a:hover {
+    color: var(--primary-color);
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+.content3:hover .img-content3 {
+    opacity: 1;
+    top: 50%;
+}
+
+
+/* //........ seller  ........// */
+
+.best-seller {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-seller .red {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.best-seller .blue {
+    color: #8989ce;
+    cursor: pointer;
+}
+
+.best-seller .white {
+    color: var(--light-black);
+    cursor: pointer;
+}
+
+.best-seller .grey {
+    color: grey;
+    cursor: pointer;
+}
+
+.best-seller .brown {
+    color: rgb(175, 53, 53);
+    cursor: pointer;
+}
+
+.best-seller .yellow {
+    color: #ffff00;
+    cursor: pointer;
+}
+
+.best-seller .orange {
+    color: #ffa500;
+    cursor: pointer;
+}
+
+.best-seller .green {
+    color: #008000;
+    cursor: pointer;
+}
+
+.seller h2 {
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+.seller .best-p1 {
+    width: 250px;
+    height: 370px;
+    /* border: 2px solid black; */
+}
+
+.seller .best-p1 img {
+    height: 250px;
+    width: 250px;
+}
+
+.seller .best-p1 .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seller .best-p1 .price .colors input[type="radio"] {
+    color: #000;
+    background-color: #000;
+}
+
+.best-seller .buy-now a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.seller a:hover {
+    color: #f05e8a;
+}
+
+.best-seller .buy-now button,
+.best-seller .add-cart button {
+    padding: 10px 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #f05e8a;
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    font-weight: 500;
+    border: 1px solid #f05e8a;
+    transition: 0.5s;
+}
+
+.best-seller .buy-now button:hover,
+.best-seller .add-cart button:hover {
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.best-seller .buy-now button:hover a,
+.best-seller .add-cart button:hover a {
+    color: #f05e8a;
+}
+
+
+/* .best-seller .add-cart button {
+    padding: 5px 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+} */
+
+
+/* //........ deal of week ........// */
+
+.deal_of_week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deal_of_week .names_of_brand p,
+.deal_of_week .names_of_brand h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.deal_of_week .names_of_brand p {
+    color: var(--grey);
+}
+
+.deal_of_week .countdown span {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--light-black);
+    line-height: 40px;
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown p {
+    margin: 0.8rem 0 0 3rem;
+}
+
+.deal_of_week .countdown a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+}
+
+.deal_of_week .countdown button {
+    margin: 0.8rem 3rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 12px;
+    transition: 0.4s;
+}
+
+.deal_of_week .countdown button:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.deal_of_week .countdown button:hover~.countdown a {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.countdown a:hover {
+    color: var(--primary-color);
+}
+
+
+/* //........ NEWS ........// */
+
+#news {
+    margin-bottom: 250px;
+}
+
+.news-heading p {
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 70px;
+}
+
+.news-heading h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+.l-news {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.l-news img {
+    height: 200px;
+    width: 300px;
+}
+
+.l-news1 {
+    position: relative;
+    width: 280px;
+    height: 230px;
+}
+
+.l-news1 .news1-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news2 {
+    position: relative;
+    width: 280px;
+    height: 230px;
+}
+
+.l-news2 .news2-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news3 {
+    position: relative;
+    width: 280px;
+    height: 230px;
+}
+
+.l-news3 .news3-conte {
+    position: absolute;
+    bottom: -60%;
+    left: 7%;
+    background: var(--white);
+    padding: 25px;
+}
+
+.l-news1 .news1-conte .date-news1 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news1 .news1-conte .date-news1 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news1 .news1-conte .date-news1 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 50px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news1 .news1-conte .date-news1 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news1 .news1-conte .date-news1 a:hover:after {
+    width: 0%;
+}
+
+.l-news1 .news1-conte .date-news1 a:hover {
+    color: var(--black);
+}
+
+.l-news2 .news2-conte .date-news2 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news2 .news2-conte .date-news2 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news2 .news2-conte .date-news2 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 60px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news2 .news2-conte .date-news2 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news2 .news2-conte .date-news2 a:hover:after {
+    width: 0%;
+}
+
+.l-news2 .news2-conte .date-news2 a:hover {
+    color: var(--black);
+}
+
+.l-news3 .news3-conte .date-news3 p {
+    color: var(--light-black);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.l-news3 .news3-conte .date-news3 h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.l-news3 .news3-conte .date-news3 a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0 60px;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.l-news3 .news3-conte .date-news3 a::after {
+    content: "";
+    position: absolute;
+    background: #ff3c78;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.l-news3 .news3-conte .date-news3 a:hover:after {
+    width: 0%;
+}
+
+.l-news3 .news3-conte .date-news3 a:hover {
+    color: var(--black);
+}
+
+
+/* //........ Footer ...... // */
+
+footer {
+    width: 100%;
+    background: var(--black);
+}
+
+.footer-container .content_1 img {
+    height: 25px;
+    width: 180px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.footer-container h4 {
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.footer-container a {
+    display: block;
+    text-decoration: none;
+    color: var(--grey);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-container .content_1 p,
+.footer-container .content_4 p {
+    color: var(--grey);
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.footer-container .content_4 input[type="email"] {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    outline: none;
+    padding: 15px 0;
+}
+
+.footer-container .content_4 .f-mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .content_4 .bx {
+    color: var(--white);
+}
+
+.f-design {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+}
+
+.f-design .f-design-txt {
+    border-top: 1px solid var(--grey);
+    padding: 25px 0;
+    font-size: 14px;
+    color: var(--grey);
+}
+
+
+/* //........ contact ...... // */
+
+.contact {
+    margin-top: 45px;
+}
+
+iframe {
+    height: 72vh;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.form .form-txt {
+    flex-basis: 48%;
+}
+
+.form .form-txt h4 {
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.form .form-txt h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: var(--light-black);
+}
+
+.form .form-txt span {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-txt h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--light-black);
+}
+
+.form .form-txt p {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-details {
+    flex-basis: 48%;
+}
+
+.form .form-details input[type="text"],
+.form .form-details input[type="email"] {
+    padding: 15px 20px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--grey);
+    margin: 35px 15px;
+    font-size: 14px;
+}
+
+.form .form-details textarea {
+    padding: 15px 20px;
+    margin: 0 15px;
+    color: var(--grey);
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 14px;
+    resize: none;
+}
+
+.form .form-details button {
+    padding: 15px 25px;
+    color: var(--white);
+    font-weight: 500;
+    background: var(--black);
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+/* //....... Media Queries .......// */
+
+@media (max-width: 500px) {
+    .head {
+        display: none;
+    }
+    .top-txt .head p,
+    .top-txt .head a {
+        font-size: 10px;
+    }
+    .home_txt h2,
+    .home_txt .home_label p {
+        display: none;
+    }
+    .home_txt {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        font-size: 12px;
+    }
+    .home_txt button {
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+    .home_txt i {
+        display: none;
+    }
+    .home_txt .home_social_icons {
+        /* display: flex; */
+        display: none;
+    }
+    .menu-items {
+        margin-right: 0;
+    }
+    .best-seller {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .l-news {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .l-news .l-news1,
+    .l-news .l-news2 {
+        margin-bottom: 200px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .content_1 {
+        margin-bottom: 30px;
+    }
+    .best-seller img {
+        padding-top: 40px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .head {
+        display: none;
+    }
+    .top-txt .head p,
+    .top-txt .head a {
+        font-size: 10px;
+    }
+    .home_txt h2,
+    .home_txt .home_label p {
+        display: none;
+    }
+    .home_txt {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        font-size: 12px;
+    }
+    .home_txt button {
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+    .home_txt i {
+        display: none;
+    }
+    .home_txt .home_social_icons {
+        /* display: flex; */
+        display: none;
+    }
+    .menu-items {
+        margin-right: 0;
+    }
+    .best-seller {
+        display: flex;
+        flex-direction: column;
+    }
+    .l-news {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .l-news .l-news1,
+    .l-news .l-news2 {
+        margin-bottom: 200px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .content_1 {
+        margin-bottom: 30px;
+    }
+    .best-seller img {
+        padding-top: 40px;
+    }
+}
+
+@media(orientation: landscape) and (max-height: 500px) {
+    .header {
+        height: 90vmax;
+    }
+}
+
+
+/* //....... Media Queries For Contact .......// */
+
+@media (max-width: 500px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+        </style>
+    </head>
+
+
+<body>
+    <script>
+        $(document).ready(function () {
+  $("a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
+$(".menu-items a").click(function () {
+  $("#checkbox").prop("checked", false);
+});
+
+    </script>
+    <script>
+        import React from 'react';
+import axios from 'axios';
+
+const BuyButton = ({ productId }) => {
+  const handleBuy = async () => {
+    try {
+      // Send a request to the backend when the button is clicked
+      await axios.post('http://your-backend-url.com/api/buy', {
+        productId,
+        userId: 'currentUserId', // Replace with actual user ID
+      });
+      alert('Purchase request sent to admin!');
+    } catch (error) {
+      console.error('Error sending message to admin:', error);
+    }
+  };
+
+  return (
+    <button onClick={handleBuy} className="bg-blue-500 text-white px-4 py-2 rounded">
+      Buy Product
+    </button>
+  );
+};
+
+export default BuyButton;
+
+    </script>
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                <a href="sign_up.html">SIGN IN</a>
+                <a href="# ">LOGIN</a>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sellers">Shop</a></li>
+                <li><a href="#news">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="comments.html">Comments and Feedback</a></li>
+               
+            </ul>
+            <div class="logo">
+                <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="">
+            </div>
+        </div>
+    </nav>
+    <div class="page1">
+    <div class="page">
+    <section id="home">
+        <div class="home_page ">
+           
+            <div class="home_txt ">
+                <p class="collectio ">SUMMER COLLECTION</p>
+                <h2>FALL - WINTER<br>Collection 2023</h2>
+                <div class="home_label ">
+                    <p>A specialist label creating luxury essentials. Ethically crafted<br>with an unwavering commitment to exceptional quality.</p>
+                </div>
+                <button><a href="#sellers">SHOP NOW</a><i class='bx bx-right-arrow-alt'></i></button>
+                <div class="home_social_icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div> 
+                <div class="home_img ">
+                    <img src="https://media.istockphoto.com/id/1214561965/photo/young-man-in-shopping-looking-for-presents-consumerism-fashion-lifestyle-concept.jpg?s=612x612&w=0&k=20&c=G1n6f4oQ6om156yTJgdKiQ8_Mn6KqtKAHHXDY0-4f3Q=" alt="">
+                </div>
+              
+            </div>
+            
+        </div></div>
+    </section>
+</div>
+
+    <section id="collection">
+        <div class="collections container">
+            <div class="content">
+                <img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" />
+                <div class="img-content">
+                    <p>Clothing Collections</p>
+                    <button><a href="https://www.amazon.in/Urbano-Fashion-Regular-Washed-Sleeve/dp/B08PFZQKC1/ref=sr_1_1_sspa?crid=15ESN4CADP5J1&dib=eyJ2IjoiMSJ9.8_KkuImS39KigKwDWC_ZPiXvq7_x87fJTOlLHbNI0OIijy3QBC8AyTShxAqK6orXrbQ_4JuRQlIahDF3XiMcUqKK8RE0dkOtLyBKP0Sb5fFTcEsF4CF_AClC0RYn1e6-0MJxAfpRXhmUEppFPpGe50HSZDY4I0MpfrcLYEl5NLZTXTZuYaDrc5cHQ3p6IigIeuCMNu304zrFXdMAf6KEvX_dt-hXkuyP1oOtOv2_buy5CaMSE9uBDqlrKuPLLsCJSjxy3Z-ZgdLi5HuFyl1O9krxXk_tpUB8R9b3TI6NBfE.-yw9gaBN42PD-cB5Pe_pH3JG_MNhfh1a7m7tDHDZCEo&dib_tag=se&keywords=denim%2Bjacket%2Bfor%2Bmen&qid=1750177726&sprefix=denim%2Bjac%2Caps%2C292&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content2">
+                <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
+                <div class="img-content2">
+                    <p>Shoes Spring</p>
+                    <button><a href="https://www.amazon.in/s?k=kook+n+keech+sneakers+for+men&crid=3JASC0UCYV2HS&sprefix=kook+sneakers+for+men%2Caps%2C276&ref=nb_sb_ss_mvt-t11-ranker_2_21">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content3">
+                <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
+                <div class="img-content3">
+                    <p>Accessories</p>
+                    <button><a href="https://www.amazon.in/Royal-Protected-Aviator-Sunglasses-RS004AV/dp/B011YDG42Y/ref=sr_1_5?crid=TG5XV0MQOBEG&dib=eyJ2IjoiMSJ9.E9AbiDFpoKau1KSt4cLaQ2F5kky0D2ReA3f4gk-l1SOwTBeq8j_D9nnfiAtt2CthEm-cBTlbPU9fn9AGTD9NEF_ui_8ZRjSpBzqpi-iCXC4WBTjAWmWBboz77gyhyQ6o-q_eGqe0LA7RafAFsWfhmW9gWjApoHB1yzgDHY7M1_rz3uT4hnl03CSxTiwsTsA1zryx5S2xvhcnWqkxbhFNLDCbnkmBQl_NUk-qfvfQFmQmoF0euwdlJ2Ops60tMq8Ee0g6wEZLsFRDBUHhbQRX-AZRQMYMqEsKtYj-SiAIl2Y.YvbR1Du7LCTe2aJd-YcHvWsVlX3_QRa_ucgXylQz-JA&dib_tag=se&keywords=royal%2Bestilo%2Bround%2Bsunglasses%2Bbrown%2Bglasses%2Bfor%2Bmen&nsdOptOutParam=true&qid=1750178186&sprefix=royal%2Bestilo%2Bround%2Bsunglasses%2Bbrown%2Bglasses%2Bfor%2Bmen%2Caps%2C248&sr=8-5&th=1">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content">
+                <img src="https://i.postimg.cc/MGFDnk4j/DRY.jpg" alt="img" />
+                <div class="img-content">
+                    <p>Dry Fruits</p>
+                    <button><a href="index123.html">SHOP NOW</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sellers">
+        <div class="seller container">
+            <h2>Top Sales</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRhva8shY4RIZm-DiR_oTWaITWr8Mo6QWcXxU8iws_GLlT8IsrKJ2vxOte6FGk4edhtHO9PdQLp9rVvmSJSMUhWqVX0ZMLRCez-aGUB8MaF9WrArianQI8hjDo&usqp=CAE" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Kizix Athnes White M10 Shoes</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;189
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle white'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Running-Sneakers-Lightweight-Breathable-Trainers/dp/B098DX8SLX/ref=sr_1_46?crid=10X3NBDC8NV4D&dib=eyJ2IjoiMSJ9.EnacffwFWHGvLbG8vnSCeERHjuof_D8UeNda9iXf4PgxVpECmzpxhtk2v1biyYSMXkZNxnp5L-H9naxyZWkrPZe7w7mNtixL2oOtSn3FoAc_X9ehjm8gGhCKFcFtZWCW5obZm3W8z0VFCYAF0rjv9Vp-e34UPsX7eB2n_cFYx39c7_vumaBllIr8r83h2hHFhg6x7tA5SHtk9ej_JRa559RU8dI62ahHOarrQ-4Y2tVEne-sRo7f4lkJ-RTE8y1TUrwtXcTR6vQphSzyEnbFLhecqMBxnYxo_qFnApNhshA.KxaDXdn0kJlv_4m3ISh4dsDb9aJD_isoiSPtXHY2lKI&dib_tag=se&keywords=kizik%2Bathens%2B%2C%2Bslip-on%2Bsneaker%2Bwhite%2Bfor%2Bmen&nsdOptOutParam=true&qid=1750178451&sprefix=kizik%2Bathens%2B%2C%2Bslip-on%2Bsneaker%2Bwhite%2Bfor%2Bmen%2Caps%2C279&sr=8-46&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Nobero Wanderer Jacket</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;28.24
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Leather-Retail%C2%AE-Motorcycle-Fashion-LRM33BRXS10_XS/dp/B0992547CZ/ref=sr_1_7?crid=1EX634O3504ZN&dib=eyJ2IjoiMSJ9.dMD8CTpi5RIgcsOKPM_pC_e1RWFF6WMYbPudFiyN_cVJolS3lgroY1E21rP7HiTJp2s8PNpF30m-HxyeRRy7oFnMaj7DD2W3N3y61zwj_tQBX15fDZ4fxiQVEUWbW26zvUUUYh020AGmCZvruYF_S9rX_ViyaH-ZcmCRWdZMo2sGKXBnlQJ_4CfD32xvjz6NTT0AgA00ZhCI5y4Q_oFJjk47AHJCRamwq0jAJUolNu8HxpeMV7kMnTuaYAP4HnaJFLN3oGKYVdQemrwBhpDl4aQtT37hbUi09593AwN_i1g.7FoTneBLP5ZPaGKnI0bqicXkvkC-FNF275wjGKTt1L0&dib_tag=se&keywords=forever%2B21%2Bfull%2Bsleeve%2Bsolid%2Bmen%2Bbrown%2Bjacket&nsdOptOutParam=true&qid=1750179001&sprefix=forever%2B21%2Bfull%2Bsleeve%2Bsolid%2Bmen%2Bbrown%2Bjacket%2Caps%2C283&sr=8-7&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/j2FhzSjf/bs2.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Tripr Men Neck Shirt</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;10.24
+                            <div class="colors">
+                                <i class='bx bxs-circle brown'></i>
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/ColorChakra-Casual-Waffle-Stylish-Sleeve/dp/B0D2Y6CHNG/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a%3Aamzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a&crid=19T7R90109EEO&cv_ct_cx=Tripr%2BMen%2BNeck%2BShirt%2Bfor%2Bmen&keywords=Tripr%2BMen%2BNeck%2BShirt%2Bfor%2Bmen&nsdOptOutParam=true&pd_rd_i=B0D2Y6CHNG&pd_rd_r=74d1e7fe-a13a-4027-addc-a9d2ca167ca0&pd_rd_w=HklGQ&pd_rd_wg=4FqFZ&pf_rd_p=0ec29fff-e589-42c1-a226-6d7b30a9905a&pf_rd_r=P50W6Y4KTHRK5ZMWBMAV&qid=1750179059&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=tripr%2Bmen%2Bneck%2Bshirt%2Bfor%2Bmen%2Caps%2C250&sr=1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSfRkbGhiFYPqMBvr_IlzUOnLqkqFWl4nlaTMCFpSbt7U0CuDc7P_0iPBYOjfdU7dcuViJVkHCSgKldR41X1obxpxyYcdaAYlCc4dFdP_vDep0ikeAmAQBIAA&usqp=CAE" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Puma Ultimate Running  Shoes</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;27.67
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Puma-Unisex-Running-Shoes-9-19055617/dp/B07F2NCTZM/ref=sr_1_2?crid=2XLKHI5HH2M7Z&dib=eyJ2IjoiMSJ9.BIUexi6GkKYkPjks31A08BwuOTYVBdI_hPJRB7PDdy7hnVuApHjgTBylxUbF-ZMVJ1ovZBVb_hJp6_vq2SsjHsgWQZFwIhl-adMtrPJUiApUbF06gB4T9dMFDMZUKNy5.csWv9bDov0f9Fcn5GUkvNGw95473Vem1i1gMHakDQhQ&dib_tag=se&keywords=Puma+Ultimate+Running+Shoes+for+men&nsdOptOutParam=true&qid=1750179189&s=apparel&sprefix=puma+ultimate+running+shoes+for+men%2Capparel%2C297&sr=1-2">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2>New Arrivals</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Zara-Polo T-Shirt</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;20.23
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/DAMENSCH-Poly-Cotton-Textured-T-Shirt-Pack-1-XX-Large/dp/B0C1BSCZPP/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a%3Aamzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a&crid=1S38DZ19I8HEA&cv_ct_cx=Zara%2BT-Shirt&keywords=Zara%2BT-Shirt&nsdOptOutParam=true&pd_rd_i=B0C1BSCZPP&pd_rd_r=2743a6be-77cf-4ba1-b710-e947073cdb68&pd_rd_w=V5rGQ&pd_rd_wg=l6sz9&pf_rd_p=0ec29fff-e589-42c1-a226-6d7b30a9905a&pf_rd_r=CASBWQXX98AF531DH062&qid=1750179440&s=apparel&sbo=9ZOMT9Jm0JH%2Ft%2BWi68iDSA%3D%3D&sprefix=zara%2Bt-shirt%2Capparel%2C312&sr=1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Puma Power unisex  Bag</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;09.28
+                            <div class="colors">
+                                <i class='bx bxs-circle brown'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle green'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Puma-Unisex-Adult-Backpack-Totally-9228603/dp/B0F3PF83DK/ref=sr_1_6?crid=1X6PMVGPFHC0E&dib=eyJ2IjoiMSJ9.t3n-SJRFlVB63EQ4vDAxmmkx9MlP-848K--thseX4cYsrvJ-OGNWflpslLolnqBG-qQZWgT9q3oV4ZvXhNNk7aLYGfoGlnL2bXmtpTL31w5uuaccfqfY3vXJycLwCpDE.vJl-JpBfHgDFJ58isNEQdqielNPXYDaCn5hUrKw3A7o&dib_tag=se&keywords=Puma+Power+unisex+Bag+brown&nsdOptOutParam=true&qid=1750179549&s=apparel&sprefix=puma+power+unisex+bag+brown%2Capparel%2C261&sr=1-6">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/Dfj5VBcz/sunglasses1.jpg" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>PS England Sunglass</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;06.24
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blank'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Metal-Polarized-Rectangular-Sunglasses-Protected/dp/B08ZCBN3XR?ref_=ast_sto_dp&th=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/FszW12Kc/na4.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>PS England Shoes</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;43.67
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Centrino-Mens-TAN-Sneaker-6-3322-25/dp/B07WMZ41Y1/ref=sr_1_7?crid=KH9B9YDKJEH4&dib=eyJ2IjoiMSJ9.iukUtCoR8XpB3DbXkg4ssi-0dmyCKRS1zcuO84W-LqhajHkedRpUJukvWvTNEf4wuQdG84LpqG9KFuZ0aF5qz0EVjoSbAWK6RuBS6NA4-kA_dc74Xvx19fj9EXC3Jw5iSpS2FjUtHJKpNuf_CRVM5-qtX7qbrbdjZYLI-7EspMQlBUztK_JhstRVJqXvZm-i3izf2Bj7v_H829s_1pS0GBdxp86OjqxMiHS7MZ8900D-0EEP3SFhou2NAKpGh1qU_i5XOoafps05rA0TLB3p7ZzsF5HR7xBa1MTq_VP_L4g.uTROQoEmotUDMt0UoS5-bSl2oE0v7Yd-wBdr_4QZaf0&dib_tag=se&keywords=England%2BShoes&nsdOptOutParam=true&qid=1750179751&s=apparel&sprefix=england%2Bshoes%2Capparel%2C323&sr=1-7&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2>Hot Sales</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>PS England Shoes</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;37.24
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle black'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Centrino-Mens-TAN-Sneaker-6-3322-25/dp/B07WMZ41Y1/ref=sr_1_7?crid=KH9B9YDKJEH4&dib=eyJ2IjoiMSJ9.iukUtCoR8XpB3DbXkg4ssi-0dmyCKRS1zcuO84W-LqhajHkedRpUJukvWvTNEf4wuQdG84LpqG9KFuZ0aF5qz0EVjoSbAWK6RuBS6NA4-kA_dc74Xvx19fj9EXC3Jw5iSpS2FjUtHJKpNuf_CRVM5-qtX7qbrbdjZYLI-7EspMQlBUztK_JhstRVJqXvZm-i3izf2Bj7v_H829s_1pS0GBdxp86OjqxMiHS7MZ8900D-0EEP3SFhou2NAKpGh1qU_i5XOoafps05rA0TLB3p7ZzsF5HR7xBa1MTq_VP_L4g.uTROQoEmotUDMt0UoS5-bSl2oE0v7Yd-wBdr_4QZaf0&dib_tag=se&keywords=England%2BShoes&nsdOptOutParam=true&qid=1750179751&s=apparel&sprefix=england%2Bshoes%2Capparel%2C323&sr=1-7&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Zara-Polo T-Shirt</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;20.23
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/DAMENSCH-Poly-Cotton-Textured-T-Shirt-Pack-1-XX-Large/dp/B0C1BSCZPP/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a%3Aamzn1.sym.0ec29fff-e589-42c1-a226-6d7b30a9905a&crid=1S38DZ19I8HEA&cv_ct_cx=Zara%2BT-Shirt&keywords=Zara%2BT-Shirt&nsdOptOutParam=true&pd_rd_i=B0C1BSCZPP&pd_rd_r=2743a6be-77cf-4ba1-b710-e947073cdb68&pd_rd_w=V5rGQ&pd_rd_wg=l6sz9&pf_rd_p=0ec29fff-e589-42c1-a226-6d7b30a9905a&pf_rd_r=CASBWQXX98AF531DH062&qid=1750179440&s=apparel&sbo=9ZOMT9Jm0JH%2Ft%2BWi68iDSA%3D%3D&sprefix=zara%2Bt-shirt%2Capparel%2C312&sr=1-3-ced4eeeb-b190-41d6-902a-1ecb3fb8b7c4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>PS England T-Shirt</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;15.24
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Symbol-Premium-Solid-Regular-SYP-A22-PL-01_Peacoat/dp/B0C46F73TC/ref=sr_1_26?crid=1IV31OOJU48VN&dib=eyJ2IjoiMSJ9.nS6CRhQGtF08EbuHgv_LRD_kElDWb7P3SDLy7CaG3jOWfmQMco0gWlvGddF4kU8-QQzmOE4MOALsI--NYnixrYPs-YesJ2AZGoDkYC6xod0yj2fTctYTU2Oc_zUnY8SRhq-8CiLUGmFVvYpSnmZbwN9e4B1NSReQQoeClAJPzfkYByTM3cJxqbhO9ptonyyDdSJboEk1g_uhHbLWN2k274O_O62RIUz8k6dcs9I2WQzyW2-MfSLsIgjGrLRy1QGmXG4F-A5vcmQPEC0CcPdpULC9Tkdbz3BvZTU9nIzU8sQ.9W9r8CO1lhMmo1oyf196ypZw8YpWQ-JCNfHYI9NaXo0&dib_tag=se&keywords=polo%2Bt-shirt%2Bhigh%2Bcost&qid=1750179949&s=apparel&sprefix=plo%2Bt-shirt%2Bhigh%2Bcost%2Capparel%2C293&sr=1-26&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>Puma Power Unisex Bag</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            &dollar;09.28
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://www.amazon.in/Puma-Unisex-Adult-Classic-Backpack-9099801/dp/B0CQCZ3H7T/ref=sr_1_1?crid=2FMNQ676KZYKM&dib=eyJ2IjoiMSJ9.VIEKyo89QLhrvcHYPa9c4LuTrTxPl2YI64gi9PKmlS09H_jIS6oGkx5Z5Gyp1dJW5LOL3msnsptHGPlbmxqgc4PjxEOlAZIGTXvTbZZ5anI.Y5OulEGII_gzX-WkauRu5NhiuO2XNeH8B9By6L9__1k&dib_tag=se&keywords=Puma%2BPower%2BUnisex%2BBag&nsdOptOutParam=true&qid=1750180005&s=apparel&sprefix=puma%2Bpower%2Bunisex%2Bbag%2Capparel%2C268&sr=1-1&th=1&psc=1">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="news-heading">
+            <p>LATEST NEWS</p>
+            <h2>Fashion New Trends</h2>
+        </div>
+        <div class="l-news container">
+            <div class="l-news1">
+                <div class="news1-img">
+                    <img src="https://i.postimg.cc/2y6wbZCm/news1.jpg" alt="img">
+                </div>
+                <div class="news1-conte">
+                    <div class="date-news1">
+                        <p><i class='bx bxs-calendar'></i> 12 February 2022</p>
+                        <h4>What Curling Irons Are The Best Ones</h4>
+                        <a href="https://www.vogue.com/article/best-curling-irons" target="_blank">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="l-news2">
+                <div class="news2-img">
+                    <img src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="img">
+                </div>
+                <div class="news2-conte">
+                    <div class="date-news2">
+                        <p><i class='bx bxs-calendar'></i> 17 February 2022</p>
+                        <h4>The Health Benefits Of Sunglasses</h4>
+                        <a href="https://www.rivieraopticare.com/blog/314864-the-health-benefits-of-wearing-sunglasses_2/" target="_blank">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="l-news3">
+                <div class="news3-img">
+                    <img src="https://i.postimg.cc/x1KKdRLM/news3.jpg" alt="img">
+                </div>
+                <div class="news3-conte">
+                    <div class="date-news3">
+                        <p><i class='bx bxs-calendar'></i> 26 February 2025</p>
+                        <h4>Eternity Bands Do Last Forever</h4>
+                        <a href="https://www.briangavindiamonds.com/news/eternity-bands-symbolize-love-that-lasts-forever/" target="_blank">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact container">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.121169986175!2d73.90618951442687!3d18.568575172551647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c131ed5b54a7%3A0xad718b8b2c93d36d!2sSky%20Vista!5e0!3m2!1sen!2sin!4v1654257749399!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form action="https://formspree.io/f/xzbowpjq" method="POST">
+            <div class="form">
+                <div class="form-txt">
+                    <h4>INFORMATION</h4>
+                    <h1>Contact Us</h1>
+                    <span>As you might expect of a company that began as a high-end interiors contractor, we pay strict
+                        attention.</span>
+            9        <h3>INDIA</h3>
+                    <p>Gajulamandyam (Post), Surappakasam, Renigunta, Tirupati, Andhra Pradesh 517520
+📞 +91-8688099364</p>
+                    <h3>ANDHRA PRADESH</h3>
+                    <p>Plus Code: XWQ3+52G, Surappakasam, Gajulamandyam (Post), Tirupati District
+<br>517520</p>
+                </div>
+              <form id="contact-form">
+    <div class="form-details">
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <textarea name="message" id="message" cols="52" rows="7" placeholder="Message" required></textarea>
+        <button type="submit"> MESSAGE</button>
+    </div>
+</form>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+        .then(function(response) {
+            alert("✅ Message sent successfully!");
+        }, function(error) {
+            alert("❌ Failed to send message. Please try again.");
+            console.error("Error:", error);
+        });
+});
+</script>
+
+
+
+
+
+            </div>
+        </form>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="https://i.postimg.cc/htGyQ4JB/footer-logo.png" alt="logo">
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
+            </div>
+            <div class="content_2">
+                <h4>SHOPPING</h4>
+                <a href="#sellers">Clothing Store</a>
+                <a href="#sellers">Trending Shoes</a>
+                <a href="#sellers">Accessories</a>
+                <a href="#sellers">Sale</a>
+            </div>
+            <div class="content_3">
+                <h4>ORDER DETAILS</h4>
+                <a href="./contact.html">Contact Us</a><!--Pending-->
+                <a href="   " target="_blank">Payment Method</a><!--Pending- https://codepen.io/sanketbodke/full/mdprZOq-->
+                <a href="" target="_blank">Delivery</a>
+                <a href="verification.html" target="_blank">Return and Exchange</a>
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="psurendhra231@gmail.com">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <p>Design and Code by<span style="color: #8989ce;"> SURENDHRA AND HIS TEAM</span></p>
+            </div>
+        </div>
+    </footer>
+    
+   <!-- Signup Popup -->
+<div id="signupPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6); z-index: 9999; display: flex; justify-content: center; align-items: center;">
+
+  <div style="background: #ffffff; padding: 30px; border-radius: 12px; width: 350px; box-shadow: 0 0 15px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
+    <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Sign Up</h2>
+
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your Name" required
+        style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;">
+      
+      <input type="email" id="email" placeholder="Your Email" required
+        style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;">
+      
+      <input type="password" id="password" placeholder="Password" required
+        style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;">
+      
+      <button type="submit"
+        style="width: 100%; padding: 12px; background-color: #007bff; color: white; font-size: 16px; border: none; border-radius: 6px; cursor: pointer;">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Script to Show Popup -->
+<script>
+  // Always show popup on load
+  window.onload = function () {
+    document.getElementById('signupPopup').style.display = 'flex';
+  };
+
+  // Handle form submit
+  document.getElementById('signupForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    alert('Thank you for signing up, ' + name + '!');
+    document.getElementById('signupPopup').style.display = 'none';
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+   })();
+</script>
+
+</body>
+</html>

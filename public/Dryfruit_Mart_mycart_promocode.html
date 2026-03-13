@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(https://cdn.pixabay.com/photo/2023/10/06/14/47/dry-fruits-8298446_1280.jpg) no-repeat center/cover;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background: transparent;
+            border: 3px solid orange;
+            background-color: rgba(88, 87, 84, 0.771);
+        }
+
+        h1 {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .promo-code {
+            display: flex;
+            gap: 10px;
+        }
+
+        .promo-code input {
+            flex: 1;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e65b50;
+        }
+
+        .total {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 15px;
+            color: orange;
+        }
+        .totalcost1{
+            margin-left: -600px;
+            margin-top: 20px;
+        }
+        .leftarrow1{
+            height: 30px;
+            width: 30px;
+            margin-left:10px ;
+            margin-top:15px ;
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index123.html">  <img src="https://tse4.mm.bing.net/th?id=OIP.b1bOAPFi41VMqpxu4C0xqAHaHa&pid=Api&P=0&h=180" class="leftarrow1"></a>
+
+    <h1>Checkout</h1>
+
+    <!-- Shipping Details -->
+    <div class="section">
+        <h2>Shipping Details</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="Postal Code" required>
+        <input type="email" placeholder="Email Address" required>
+    </div>
+
+    <!-- Payment Details -->
+    <div class="section">
+        <h2>Payment Details</h2>
+        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="Cardholder Name" required>
+        <input type="number" placeholder="Expiration Date (MM/YY)" required>
+        <input type="number" placeholder="CVV" required>
+    </div>
+
+    <!-- Promo Code -->
+    <div class="section">
+        <h2>Promo Code</h2>
+        <div class="promo-code">
+            <input type="text" placeholder="Enter Promo Code">
+            <button>Apply</button>
+        </div>
+    </div>
+
+    <!-- Total Amount -->
+    <div class="section">
+        <div class="total">
+            <p class="totalcost1">Total Cost</p>
+           <p> : $99.99</p>
+        </div>
+    </div>
+
+    <!-- Place Order Button -->
+    <div class="section">
+        <button>Place Order</button>
+    </div>
+</div>
+<div style="margin-top: 75px; width:400px;">
+    <div style="height: 80px; margin-top:-20px;width: 900px;background-color:aliceblue;  box-shadow: 2px 2px 2px 2px rgb(131, 127, 127); border-radius: 8px; margin-left: 305px; display: flex; justify-content: space-around; align-items: center; position:sticky;">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126122.png" style="height: 30px; width: 30px;margin-left:-05px; ">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.mo93ABeC7YN4ubbO_U4kUgHaHa&pid=Api&P=0&h=180" style="height: 30px; width: 30px;margin-left:20px;">
+        <a href="index123.html"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" style="height: 30px; width: 30px;"></a>
+        <img src="https://cdn-icons-png.flaticon.com/512/5166/5166615.png" style="height: 50px; width: 50px;">
+        <a href="Dryfruit_Mart_accountsettings.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqA6uHEObfkhtT164f3XOrzX_PRvX7kKZaig&s" style="height: 50px; width: 50px;"></a>
+    </div>
+    </div>
+
+</body>
+</html>

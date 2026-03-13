@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <style> 
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-section h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.left-section h1 span {
+  color: #007bff;
+}
+
+.left-section p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  margin-top: 20px;
+}
+
+.team-section p {
+  font-size: 16px;
+  margin: 20px 0 10px;
+}
+
+.job-board {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.team-image {
+  max-width: 40%;
+  height:130px;
+  margin-top:-70px;
+  margin-left: 210px;
+  border-radius: 10px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: orange;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #f1b156;
+}
+label{
+    color: orange;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1 style="font-size: 50px;"><span style="color: #0056b3;">Con</span><span style="color: rgb(121, 241, 241);">nect</span> with Our <br>Team of Experts</h1>
+      <p style="color: black; margin-top: -10px;">Contact our team of excellence-driven experts today to bring your project to life.</p>
+      <div class="contact-info">
+        <br>
+        <p>📞 713.953.5200</p>
+        <p style="margin-left: 200px; margin-top: -30px;">📧 lja@lja.com</p>
+        <p style="margin-left: 370px; margin-top: -30px;">📍 See Our Locations</p>
+      </div>
+      <div class="team-section">
+        <div style="height: 200px;border-radius: 20px; width: 410px; border: 1px solid rgb(160, 158, 158); margin-top: 90px;">
+        <br>
+        <div style="margin-left: 20px; margin-top: -30px;">
+        <p style="font-size: 21px; margin-top: 60px; color: rgb(73, 71, 71); font-weight: bold;">Want to Join Our<br> Talented Team?</p>
+        <a href="#" class="job-board">VISIT OUR JOB BOARD</a>
+      </div>
+      <img src="https://t3.ftcdn.net/jpg/01/78/63/30/360_F_178633029_hAn2tL6yz9RR4K2utyg45bgR9gkxXO54.jpg" alt="Team Expert" class="team-image">
+    </div>
+    </div>
+    </div>
+    <div class="right-section">
+      <form action="#" method="post">
+        <label for="full-name"><span style="color: orange;">Full Name</span></label>
+        <input type="text" id="full-name" name="full-name" required>
+        
+        <label for="email"><span style="color: orange;">Email Address</span></label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone-number"><span style="color: orange;">Phone Number</span></label>
+        <input type="tel" id="phone-number" name="phone-number" required>
+        
+        <label for="location"><span style="color: orange;">Location</span></label>
+        <input type="text" id="location" name="location" required>
+        
+        <label for="expertise"><span style="color: orange;">What Expertise You're Interested In</span></label>
+        <select id="expertise" name="expertise">
+          <option value="" disabled selected>Select</option>
+          <option value="option1">Digital Marketing</option>
+          <option value="option2">Data science</option>
+        </select>
+        
+        <label for="message"><span style="color: orange;">Tell Us About Your Project</span></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div style="margin-top: 75px; width:400px; ">
+    <div style="height: 80px; margin-top:-60px;width: 700px; box-shadow: 2px 2px 2px 2px rgb(131, 127, 127); border-radius: 8px; margin-left: 410px; display: flex; justify-content: space-around; align-items: center; position:sticky;">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126122.png" style="height: 30px; width: 30px;margin-left:-05px; ">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.mo93ABeC7YN4ubbO_U4kUgHaHa&pid=Api&P=0&h=180" style="height: 30px; width: 30px;margin-left:20px;">
+        <a href="index123.html"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" style="height: 30px; width: 30px;"></a>
+        <img src="https://cdn-icons-png.flaticon.com/512/5166/5166615.png" style="height: 50px; width: 50px;">
+        <a href="Dryfruit_Mart_accountsettings.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqA6uHEObfkhtT164f3XOrzX_PRvX7kKZaig&s" style="height: 50px; width: 50px;"></a>
+    </div>
+    </div>
+</body>
+</html>

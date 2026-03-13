@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            height: 80%;
+            width: 80%;
+            max-width: 1000px;
+            background: rgb(10, 168, 136);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .login-box {
+            flex: 1;
+            padding: 30px;
+            background: #aec0f4;
+        }
+        
+        .login-box h2 {
+            text-align: center;
+            color: #0056a1;
+            margin-bottom: 20px;
+        }
+        
+        .login-box form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: #0056a1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .login-box button:hover {
+            background: #bee196;
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .social-login button {
+            flex: 1;
+            margin: 5px;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .social-login .facebook {
+            background:white;
+            color:rgb(100, 100, 243);
+            font-weight: bold;
+            height: 50px;
+            width: 150px;
+        }
+        
+        .social-login .google {
+            background:white;
+            color: rgb(100, 100, 243);
+            font-weight: bold;
+            height: 50px;
+            width: 150px;
+        }
+        
+        .login-box p {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .login-box a {
+            color: #0056a1;
+            text-decoration: none;
+        }
+        
+        .image-box {
+            flex: 1;
+            background: #aae244;
+            background-image: url('https://tse2.mm.bing.net/th?id=OIP.FLeRI6metHwujMau6_MAEwHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:-100px ;
+        }
+        
+        .image-box img {
+            width: 80%;
+            border-radius: 10px;
+        }
+        .email55{
+            padding: 20px;
+            width: 25%;
+            position: absolute;
+            height: 40px;
+            margin-top: 0px;
+            color: gray;
+            font-size: 20px;
+            opacity: 0.8;
+            
+        }
+        .email155{
+            padding: 20px;
+            width: 25%;
+            position: absolute;
+            height: 40px;
+            margin-top: 100px;
+            color: gray;
+            font-size: 20px;
+            opacity: 0.8;
+            
+        }
+        .but-1{
+           height: 70px;
+           width: 100px;
+           color: white;
+           font-size: 25px;
+           font-weight: bold; 
+           margin-top: 240px;
+        }
+        .footerdry{
+            position: absolute;
+            margin-top: 450px;
+            color:#aec0f4;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: -10px;
+        }
+        .leftarrow1{
+            height: 30px;
+            width: 30px;
+            margin-left:20px ;
+            margin-top:1px ;
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <a href="index.html">  <img src="https://tse4.mm.bing.net/th?id=OIP.bR0Vpvy2w2knzTEUohWc2wHaHa&pid=Api&P=0&h=180" class="leftarrow1"></a>
+
+            <h2 style="color: white; font-weight:bold;font-size:40px; margin-top:-10px">Login Now</h2>
+            <form>
+               <div class="email55"> <input type="text" placeholder="Email or Username" required class="email55"></div>
+               <div class="email155"> <input type="text" placeholder="Password" required class="email155"></div>
+
+               <!-- <input type="password" placeholder="Password" required>-->  
+                <button type="submit" class="but-1">LOGIN</button>
+            </form>
+            <p style="color: black;font-weight:bold;">Or login with</p>
+            <div class="social-login">
+                <div style="position: relative; margin-left:50px;"><button class="facebook"><span style="margin-top: 5px;margin-left:-80px; position:absolute">Facebook</span><span><img src="https://tse1.mm.bing.net/th?id=OIP.zOCcVTv6jKMsTbljKTNnZgHaHa&pid=Api&P=0&h=180" style="height: 20px; margin-top:3px; width:20px;margin-left:-105px;position:relative;"></span></button>
+               </div>
+              <div style="margin-left:300px;position:absolute"> <div style="position: relative; margin-left:-60px;"><button class="facebook"><span style="margin-top: 5px;margin-left:-80px; position:absolute">Google</span><span><img src="https://tse1.mm.bing.net/th?id=OIP.flV_HAhkgpxUwwDRW-5p9AHaHa&pid=Api&P=0&h=180" style="height: 20px; margin-top:3px; width:20px;margin-left:-105px;position:relative;"></span></button>
+               </div>
+            </div>
+            </div>
+            <p>Not a member? <a href="#"><span style="color: orange;"><a href="Dryfruit_Mart_account.html"> Sign up now</span></a></a></p>
+        </div>
+        <div class="image-box">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.KY5IS2m90kyWkJtaO347RAHaE6&pid=Api&P=0&h=180" alt="Dried fruits" style="background-color: transparent;">
+        <p class="footerdry"><span style="color: orange;">Dry Fruit Mart</span> is the best<br> quality and healthy dry <br>fruits provider in India </p></div>
+    </div>
+
+</body>
+</html>
